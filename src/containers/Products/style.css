@@ -1,0 +1,19 @@
+.key {
+  font-weight: 600;
+  font-size:1.1rem;
+}
+.value {
+  font-style: italic;
+  font-size:0.9rem;
+}
+
+.product-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.product-container img {
+  max-width: 80px;
+  max-height: 150px;
+  padding:4px;
+}

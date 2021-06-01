@@ -1,0 +1,63 @@
+.modal-content {
+  border: none;
+  .modal-header {
+    background-color: #212529;
+    padding: 10px 15px;
+    justify-content: space-around;
+    .modal-title {
+      color: #eee;
+      font-size: 22px;
+    }
+  }
+}
+
+.mr {
+  margin-right: 2px;
+}
+.actionBtn {
+  border: 1px solid #eee;
+}
+.react-checkbox-tree {
+
+  .rct-node-expanded > .rct-text > label > .rct-title {
+    font-weight: bold;
+  }
+  ol li.rct-node-expanded {
+    position: relative;
+  }
+  ol {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: #eee;
+  }
+  ol > li {
+    flex-basis: 25%;
+    width: 100%;
+    padding: 10px 5px;
+  }
+  ol > li > ol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  ol > li .rct-text {
+    font-size: 16px;
+  }
+  ol > li .rct-checkbox {
+    font-size: 12px;
+  }
+  ol > li .rct-node-icon {
+    display: none;
+  }
+  .rct-node-expanded:before {
+    content: '';
+    background: #333;
+    width: 1px;
+    height: calc(100% - 60px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(17px, 30px);
+  }
+}
