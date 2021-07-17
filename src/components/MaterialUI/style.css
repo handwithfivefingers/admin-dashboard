@@ -1,7 +1,11 @@
 .headerDropdownContainer {
   position: relative;
+  margin: 0 5px;
 }
-.headerDropdownContainer:first-child {
+.headerDropdownContainer a.loginButton {
+  padding: 5px 40px;
+}
+.headerDropdownContainer a.loginButton {
   background: #fff;
 }
 .headerDropdownContainer .dropdown {
@@ -21,7 +25,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  padding: 12px 20px;
   border-bottom: 1px solid #eee;
 }
 .headerDropdownContainer .dropdown .firstmenu span {
@@ -57,15 +61,11 @@
   background: #eee;
 }
 
-.headerDropdownContainer:hover .dropdown {
+.headerDropdownContainer:hover .dropdown  {
   opacity: 1;
   visibility: visible;
 }
 
-/* .materialInput {
-  min-width: 304px;
-  width: calc(100% - 540px);
-} */
 .modalFixedBg {
   position: fixed;
   top: 0;
@@ -80,24 +80,21 @@
   background: #21212198;
   height: 100%;
 }
-/* .modalContainer {
-  z-index: 99;
-}
-*/
 .authContainer {
-  height:529px;
-  padding:25px 0;
-} 
+  height: 529px;
+  padding: 25px 0;
+}
 .modalClose {
   height: 50px;
-    width: 50px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #333;
-    transform: translate(-800%, 50%);
-    font-weight: 600;
-    z-index: 1;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #333;
+  transform: translate(-800%, 50%);
+  font-weight: 600;
+  z-index: 1;
+  cursor: pointer;
 }
 .rightspace {
   background: #fff;
@@ -116,23 +113,23 @@
   z-index: 0;
   opacity: 1;
   transition: 0.2s ease-in-out;
-  background:#fff;
+  background: #fff;
 }
 .materialInput label.focus {
   transform: translate(0%, 0px);
   left: 20px;
   top: 0;
-  opacity: 1;
+  opacity: 0;
 }
 .materialInput label.focus:before {
-  position:absolute;
-  content:'';
-  height:1px;
-  width:100px;
-  background:#333;
-  top:0;
-  right:0;
-  transform:translate(101%, 12px);
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100px;
+  background: #333;
+  top: 0;
+  right: 0;
+  transform: translate(101%, 12px);
   z-index: -1;
 }
 
@@ -146,16 +143,32 @@
   z-index: 1;
   transition: 0.2s ease-in-out;
 }
-.materialInput input:focus , .materialInput input:hover{
+.materialInput input:focus,
+.materialInput input:hover {
   outline: none;
-  border-bottom:2px solid tomato
+  border-bottom: 2px solid tomato;
 }
 .materialButton {
-  padding:12px 20px;
-  font-size:16px;
-  background:#fb641b;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #fb641b;
   outline: none;
-  border:0;
-  width:100%;
-  color:#fff;
-} 
+  border: 0;
+  width: 100%;
+  color: #fff;
+}
+.icon {
+  min-width: 30px;
+  color: #2874f0;
+}
+a.more > span {
+  font-weight: 100;
+  transition: 0.2s ease-in-out;
+}
+a.more:hover > span {
+  transform: rotate(-180deg);
+}
+a.more {
+  width: 100%;
+  justify-content: center;
+}

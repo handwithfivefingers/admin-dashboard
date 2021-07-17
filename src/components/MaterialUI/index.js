@@ -9,10 +9,12 @@ const Modal = (props) => {
     <>
       <div className="modalFixedBg">
         <div style={{ position: 'relative' }}>
-          <div className="modalClose" onClick={props.onClose}>
-            X
+          <div className="modalContainer">
+            <div className="modalClose" onClick={props.onClose}>
+              X
+            </div>
+            {props.children}
           </div>
-          <div className="modalContainer">{props.children}</div>
         </div>
       </div>
     </>
@@ -31,7 +33,6 @@ const MaterialInput = (props) => {
           lineHeight: 'none',
         }}
       >
-        {' '}
         {props.label}
       </label>
       <div
@@ -60,9 +61,12 @@ const MaterialInput = (props) => {
 };
 
 const MaterialButton = (props) => {
+  const onClick = () =>{
+    props.onClick && props.onClick();
+  }
   return (
-    <div style={{ width: '90%' }}>
-      <button className="materialButton">{props.title && props.title}</button>
+    <div style={{ width: '100%' }}>
+      <button className="materialButton" onClick={onClick}>{props.title && props.title}</button>
     </div>
   );
 };
@@ -78,7 +82,7 @@ const DropdownMenu = (props) => {
             props.menus.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.href}>{item.label}</a>
+                  <a href={item.href}><span className="icon">{item.icon}</span>{item.label}</a>
                 </li>
               );
             })}
